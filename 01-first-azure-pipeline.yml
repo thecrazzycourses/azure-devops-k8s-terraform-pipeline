@@ -20,4 +20,10 @@ jobs:
 - job: Job2
   steps:
   - script: echo Job 2!
-    displayName: 'Run Job12'
+    displayName: 'Run Job2'
+
+- job: Job3
+  dependsOn: Job2
+  steps:
+  - script: echo Job 3!
+    displayName: 'Run Job3'
