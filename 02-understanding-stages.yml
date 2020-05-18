@@ -15,33 +15,33 @@ stages:
   - job: DevBuildJob
     steps: 
     - bash: echo DevBuildJob
-- stage: DevDeploy  
-  dependsOn: Build  
-  jobs:
-  - job: DevDeployJob
-    steps: 
-    - bash: echo DevDeployJob
-- stage: QaDeploy 
-  dependsOn: DevDeploy
-  jobs:
-  - job: QaDeployJob
-    steps: 
-    - bash: echo QaDeployJob
-- stage: SitDeploy 
-  dependsOn: DevDeploy
-  jobs:
-  - job: SitDeployJob
-    steps: 
-    - bash: echo SitDeployJob
-- stage: StageDeploy 
-  dependsOn: SitDeploy
-  jobs:
-  - job: QaDeployJob
-    steps: 
-    - bash: echo QaDeployJob
-- stage: ProdDeploy 
-  dependsOn: StageDeploy
-  jobs:
-  - job: ProdDeployJob
-    steps: 
-    - bash: echo ProdDeployJob
+# - stage: DevDeploy  
+#   dependsOn: Build  
+#   jobs:
+#   - job: DevDeployJob
+#     steps: 
+#     - bash: echo DevDeployJob
+# - stage: QaDeploy 
+#   dependsOn: DevDeploy
+#   jobs:
+#   - job: QaDeployJob
+#     steps: 
+#     - bash: echo QaDeployJob
+# - stage: SitDeploy 
+#   dependsOn: DevDeploy
+#   jobs:
+#   - job: SitDeployJob
+#     steps: 
+#     - bash: echo SitDeployJob
+# - stage: StageDeploy 
+#   dependsOn: SitDeploy
+#   jobs:
+#   - job: QaDeployJob
+#     steps: 
+#     - bash: echo QaDeployJob
+# - stage: ProdDeploy 
+#   dependsOn: StageDeploy
+#   jobs:
+#   - job: ProdDeployJob
+#     steps: 
+#     - bash: echo ProdDeployJob
